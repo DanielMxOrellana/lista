@@ -12,3 +12,17 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+  
+model Listadeseo {
+    id            Int      @id @default(autoincrement())
+    name          String
+    description   String
+    lastSee       String   // O DateTime, dependiendo de tus necesidades
+    countlastSee  Int
+    extinct       Boolean   @default(false)
+    createAt      DateTime @default(now())
+    updateAt      DateTime @updatedAt
+}
+
+
+

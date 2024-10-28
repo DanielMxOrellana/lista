@@ -1,21 +1,18 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"], // Puedes agregar más bibliotecas según tus necesidades
+    "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // Directorio de salida para los archivos compilados
+    "rootDir": "./", // Directorio raíz de los archivos fuente
+    "noImplicitAny": true, // Previene el uso de 'any' implícito
+    "moduleResolution": "node", // Modo de resolución de módulos
+    "resolveJsonModule": true // Permite importar archivos JSON
+  },
+  "include": ["prisma/**/*.ts", "src/**/*.ts"], // Incluir tus archivos TypeScript
+  "exclude": ["node_modules", "**/*.spec.ts"] // Excluir archivos y directorios innecesarios
 }

@@ -14,7 +14,7 @@ datasource db {
 }
   
 model Listadeseo {
-    id            Int      @id @default(autoincrement())
+  id    Int     @id @default(autoincrement())
     name          String
     description   String
     lastSee       String   // O DateTime, dependiendo de tus necesidades
